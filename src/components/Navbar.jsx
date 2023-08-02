@@ -83,8 +83,8 @@ const Navbar = () => {
         </Links>
         <Icons>
           {/* Changed the image due to copyright problems */}
-          <Icon src="./img/search.png" />
-          <Button>Hire Now</Button>
+          {/*<Icon src="./img/search.png" />*/}
+          <Button>Message Me</Button>
         </Icons>
       </Container>
     </Section>
