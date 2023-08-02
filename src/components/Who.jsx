@@ -58,7 +58,7 @@ const Line = styled.img`
 `;
 
 const Subtitle = styled.h2`
-  color: #da4ea2;
+  color: #EE3E38;
 `;
 
 const Desc = styled.p`
