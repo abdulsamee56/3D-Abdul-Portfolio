@@ -1,23 +1,36 @@
-import React from 'react'
-import { styled } from 'styled-components';
-import Navbar from './Navbar';
-
+import React, { Suspense } from "react";
+import styled from "styled-components";
+import Navbar from "./Navbar";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import { Box } from "@react-three/drei";
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align:center;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:space-between;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    height: 200vh;
+  }
 `;
 
 const Container = styled.div`
-  height:100vh;
-  scroll-snap-align:center;
+  height: 100%;
+  scroll-snap-align: center;
   width: 1400px;
-  display:flex;
+  display: flex;
   justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const Left = styled.div`
@@ -34,7 +47,7 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 50px;
+  font-size: 74px;
 
   @media only screen and (max-width: 768px) {
     text-align: center;
@@ -108,32 +121,43 @@ const Img = styled.img`
   }
 `;
 
-
 const Hero = () => {
   return (
-   <Section>
+    <Section>
       <Navbar />
-
       <Container>
         <Left>
-          <Title>Crafting Innovative Solutions | Your Full-Stack Developer</Title>
+          <Title>Think. Make. Solve.</Title>
           <WhatWeDo>
-            <Line src="./img/line.png"/>
-            <Subtitle>What I Do</Subtitle>
+            <Line src="./img/line.png" />
+            <Subtitle>What we Do</Subtitle>
           </WhatWeDo>
-          <Desc>I Enjoy Creating User-Friendly Web Solutions with a Full-Stack Approach.</Desc>
-          {/*<Button>Learn More</Button>*/}
-          
+          <Desc>
+            we enjoy creating delightful, human-centered digital experiences.
+          </Desc>
+          <Button>Learn More</Button>
         </Left>
         <Right>
-          <Img src="./img/fullstack.png"/>
+        <Canvas>
+  <Suspense fallback={null}>
+    <OrbitControls enableZoom={false} />
+    <ambientLight intensity={1} />
+    <directionalLight position={[3, 2, 1]} />
+    <Box args={[2, 2, 2]} scale={1.4}>
+      <MeshDistortMaterial
+        color="#3d1c56"
+        attach="material"
+        distort={0.5}
+        speed={2}
+      />
+    </Box>
+  </Suspense>
+</Canvas>;
+          <Img src="./img/fullstack.png" />
         </Right>
       </Container>
-   </Section>
-  )
-}
+    </Section>
+  );
+};
 
-export default Hero
-
-
-
+export default Hero;

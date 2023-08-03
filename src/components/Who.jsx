@@ -1,7 +1,8 @@
-import React from 'react'
-import { styled } from 'styled-components';
-
-
+import React, { Suspense } from "react";
+import styled from "styled-components";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import Cube from "./Cube";
 
 const Section = styled.div`
   height: 100vh;
@@ -58,7 +59,7 @@ const Line = styled.img`
 `;
 
 const Subtitle = styled.h2`
-  color: #EE3E38;
+  color: #da4ea2;
 `;
 
 const Desc = styled.p`
@@ -79,29 +80,33 @@ const Button = styled.button`
 
 const Who = () => {
   return (
-   <Section>
-     
-
+    <Section>
       <Container>
         <Left>
-          
-          {/*<Button>Learn More</Button>*/}
-          
+          <Canvas camera={{ position: [5, 5, 5], fov: 25 }}>
+            <Suspense fallback={null}>
+              <ambientLight intensity={0.5} />
+              <directionalLight position={[3, 2, 1]} />
+              <Cube />
+              <OrbitControls enableZoom={false} autoRotate />
+            </Suspense>
+          </Canvas>
         </Left>
         <Right>
-        <Title>Crafting Innovative Solutions | Your Full-Stack Developer</Title>
+          <Title>Think outside the square space</Title>
           <WhatWeDo>
-            <Line src="./img/line.png"/>
-            <Subtitle>What I Do</Subtitle>
+            <Line src="./img/line.png" />
+            <Subtitle>Who we Are</Subtitle>
           </WhatWeDo>
-          <Desc>I Enjoy Creating User-Friendly Web Solutions with a Full-Stack Approach.</Desc>
+          <Desc>
+            a creative group of designers and developers with a passion for the
+            arts.
+          </Desc>
+          <Button>See our works</Button>
         </Right>
       </Container>
-   </Section>
-  )
-}
+    </Section>
+  );
+};
 
-export default Who
-
-
-
+export default Who;
