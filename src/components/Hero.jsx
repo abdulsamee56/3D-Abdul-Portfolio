@@ -127,15 +127,16 @@ const Hero = () => {
       <Navbar />
       <Container>
         <Left>
-          <Title>Think. Make. Solve.</Title>
+          <Title>Create. Innovate. Solve.
+</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
-            <Subtitle>What we Do</Subtitle>
+            
           </WhatWeDo>
           <Desc>
-            we enjoy creating delightful, human-centered digital experiences.
+          With a strong foundation in full-stack development, I embrace opportunities to collaborate on projects that push boundaries and drive technological innovation.
           </Desc>
-          <Button>Learn More</Button>
+          
         </Left>
         <Right>
         <Canvas>

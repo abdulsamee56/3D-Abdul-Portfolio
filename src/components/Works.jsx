@@ -65,9 +65,11 @@ const Line = styled.img`
 
 const Subtitle = styled.h2`
   color: #EE3E38;
+  font-size:30px;
 `;
 
 const Desc = styled.p`
+  line-height:40px;
   font-size: 24px;
   color: lightgray;
   @media only screen and (max-width: 768px) {
@@ -126,15 +128,15 @@ const Hero = () => {
       
       <Container>
         <Left>
-          <Title>Think. Make. Solve.</Title>
+
           <WhatWeDo>
             <Line src="./img/line.png" />
-            <Subtitle>What we Do</Subtitle>
+            <Subtitle>What I Do</Subtitle>
           </WhatWeDo>
           <Desc>
-            we enjoy creating delightful, human-centered digital experiences.
+          I'm Abdul Samee, a passionate Computer Science major at Wayne State University, specializing in full-stack development. With expertise in various programming languages and frameworks, I create captivating user interfaces and robust back-end systems. As an aspiring AWS Cloud Practitioner, I'm eager to explore cloud-based architectures and design scalable applications. Actively engaged in hackathons and open-source projects, I stay at the forefront of emerging technologies. Seeking an internship to make a meaningful impact through cutting-edge technology. Let's connect and explore how I can contribute to your organization's success!
           </Desc>
-          <Button>Learn More</Button>
+          
         </Left>
         <Right>
           <Canvas>
