@@ -16,14 +16,20 @@ const Container = styled.div`
   scroll-snap-align: center;
   width: 1400px;
   display: flex;
+  flex-direction: column-reverse; 
   justify-content: space-between;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row; /* Restore the original order on laptop */
+    justify-content: space-between;
+  }
 `;
 
 const Left = styled.div`
   flex: 1;
 
   @media only screen and (max-width: 768px) {
-    display: none;
+    width: 100%; /* Full width on mobile */
   }
 `;
 
@@ -45,6 +51,8 @@ const Right = styled.div`
   @media only screen and (max-width: 768px) {
     align-items: center;
     text-align: center;
+    position: relative;
+    z-index: 1;
   }
 `;
 
