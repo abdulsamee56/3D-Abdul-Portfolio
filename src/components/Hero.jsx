@@ -139,7 +139,7 @@ const Hero = () => {
           
         </Left>
         <Right>
-        <Canvas>
+       {/*<Canvas>
   <Suspense fallback={null}>
     <OrbitControls enableZoom={false} />
     <ambientLight intensity={1} />
@@ -153,7 +153,7 @@ const Hero = () => {
       />
     </Box>
   </Suspense>
-</Canvas>;
+  </Canvas>;*/} 
           <Img src="./img/fullstack.png" />
         </Right>
       </Container>
