@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-
+import Navbar from "./Navbar";
 import styled from "styled-components";
 import Map from "./Map";
 
@@ -69,12 +69,44 @@ const Button = styled.button`
 
 const Right = styled.div`
   flex: 1;
+  position: relative;
 
   @media only screen and (max-width: 768px) {
     display: none;
   }
 `;
+const ImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+`;
+const Img = styled.img`
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  animation: animate 2s infinite ease alternate;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position:absolute;
+  @media only screen and (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+    display: none;
+  }
 
+  @keyframes animate {
+    to {
+      transform: translateY(20px);
+    }
+  }
+`;
 const Contact = () => {
   const ref = useRef();
   const [success, setSuccess] = useState(null);
@@ -119,7 +151,10 @@ const Contact = () => {
           </Form>
         </Left>
         <Right>
-          <Map />
+        {/* <Map /> */}
+        <ImageContainer>
+            <Img src="./img/email.png" />
+          </ImageContainer>
         </Right>
       </Container>
     </Section>
