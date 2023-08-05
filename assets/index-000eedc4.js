@@ -3987,6 +3987,7 @@ vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}vec4 mod289(vec4 x){ret
   @media only screen and (max-width: 768px) {
     width: 300px;
     height: 300px;
+    display: none;
   }
 
   @keyframes animate {
