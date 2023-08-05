@@ -7,7 +7,7 @@ import { Box } from "@react-three/drei";
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +20,8 @@ const Section = styled.div`
 
 const Container = styled.div`
   height: 100%;
-  scroll-snap-align: center;
+  
+  /* scroll-snap-align: center; */
   width: 1400px;
   display: flex;
   justify-content: space-between;

@@ -6,14 +6,14 @@ import Cube from "./Cube";
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
   display: flex;
   justify-content: center;
 `;
 
 const Container = styled.div`
   height: 100vh;
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
   width: 1400px;
   display: flex;
   flex-direction: column-reverse; 

@@ -81,7 +81,7 @@ const Navbar = () => {
         <Icons>
           {/* Changed the image due to copyright problems */}
           {/*<Icon src="./img/search.png" />*/}
-          <Button>Message Me</Button>
+          {/* <Button>Message Me</Button>*/}
         </Icons>
       </Container>
     </Section>
