@@ -70,7 +70,7 @@ const Subtitle = styled.h2`
 
 const Desc = styled.p`
   line-height:40px;
-  font-size: 24px;
+  font-size: 23px;
   color: lightgray;
   @media only screen and (max-width: 768px) {
     padding: 20px;
