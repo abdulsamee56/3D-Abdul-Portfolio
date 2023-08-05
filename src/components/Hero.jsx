@@ -113,6 +113,7 @@ const Img = styled.img`
   @media only screen and (max-width: 768px) {
     width: 300px;
     height: 300px;
+    display: none;
   }
 
   @keyframes animate {
