@@ -134,7 +134,7 @@ const Hero = () => {
             <Subtitle>What I Do</Subtitle>
           </WhatWeDo>
           <Desc>
-          I'm Abdul Samee, a passionate Computer Science major at Wayne State University, specializing in full-stack development. With expertise in various programming languages and frameworks, I create captivating user interfaces and robust back-end systems. As an aspiring AWS Cloud Practitioner, I'm eager to explore cloud-based architectures and design scalable applications. Actively engaged in hackathons and open-source projects, I stay at the forefront of emerging technologies. Seeking an internship to make a meaningful impact through cutting-edge technology. Let's connect and explore how I can contribute to your organization's success!
+          I'm Abdul Samee, a passionate Computer Science major at Wayne State University, Specializing in full-stack development. With expertise in various programming languages and frameworks, I create captivating user interfaces and robust back-end systems. As an aspiring AWS Cloud Practitioner, I'm eager to explore cloud-based architectures and design scalable applications. Actively engaged in hackathons and open-source projects, I stay at the forefront of emerging technologies. Seeking an internship to make a meaningful impact through cutting-edge technology. Let's connect and explore how I can contribute to your organization's success!
           </Desc>
           
         </Left>
